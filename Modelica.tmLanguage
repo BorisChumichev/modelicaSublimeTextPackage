@@ -14,7 +14,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>\b(parameter|constant|import|connect|initial|inner|outer)\b</string>
+			<string>\b(parameter|constant|import|inner|outer|final|input|output)\b</string>
 			<key>name</key>
 	   		<string>constant.language</string>
 		</dict>
@@ -26,37 +26,31 @@
 		</dict>
 		<dict> 
 			<key>match</key>
-			<string>^\s*([A-Z])(?:([^ ;$]+)(;)?)([.]([A-Z])(?:([^ ;$]+)(;)?)?)++</string>
+			<string>\b\s*([A-Z])(?:([^ ;$]+)(;)?)([.]([A-Z])(?:([^ ;$]+)(;)?)?)++\b</string>
 			<key>name</key>
 			<string>keyword</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b()\b</string>
-			<key>name</key>
-			<string>invalid.illegal</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(min|max|abs|tan|atan|cos|acos|sin|asin|der)\b</string>
+			<string>\b(min|max|abs|der|connect|sign|sqrt|Integer|String|div|rem|ceil|floor|integer|tan|atan|atan2|cos|acos|sin|asin|sinh|cosh|tanh|exp|log|log10|delay|cardinality|homotopy|semiLinear|inStream|actualStream|spatialDistribution|getInstanceName)\b</string>
 			<key>name</key>
 			<string>string.quoted</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(for|if|when|then|loop|end|else|elsewhen|and|break|each|elseif|function)\b</string>
+			<string>\b(for|if|when|then|loop|end if|end when|end for|else|elsewhen|and|break|each|elseif)\b</string>
 			<key>name</key>
 			<string>variable.parameter</string>
 		</dict>
 	    <dict>
 			<key>match</key>
-			<string>\b(package|block|model|extends|partial|within)\b</string>
+			<string>\b(extends|partial|within)\b</string>
 			<key>name</key>
 			<string>support.type</string>
 		</dict>
 	    <dict>
 			<key>match</key>
-			<string>\b(algorithm|equation|protected|public)\b</string>
+			<string>\b(algorithm|equation|protected|public|model|block|package|function|register|end|initial)\b</string>
 			<key>name</key>
 			<string>support.constant</string>
 		</dict>
@@ -88,7 +82,7 @@
 			<key>end</key>
 			<string>"</string>
 			<key>name</key>
-			<string>entity.name.class</string>
+			<string>entity.other.inherited-class</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
