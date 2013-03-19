@@ -11,4 +11,4 @@ Installation:
 
 1. Ctrl+Shift+P -> Add Repository
 2. Enter: https://github.com/broyn/modelicaSublimeTextPackage.git 
-3. Ctrl+Shift+P -> search for "modelicaSublimeTextPackage"
+3. Ctrl+Shift+P -> Install Package -> search for "modelicaSublimeTextPackage"
