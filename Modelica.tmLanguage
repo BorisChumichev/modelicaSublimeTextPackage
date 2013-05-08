@@ -32,13 +32,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(min|max|abs|der|connect|sign|sqrt|Integer|String|div|rem|ceil|floor|integer|tan|atan|atan2|cos|acos|sin|asin|sinh|cosh|tanh|exp|log|log10|delay|cardinality|homotopy|semiLinear|inStream|actualStream|spatialDistribution|getInstanceName)\b</string>
+			<string>\b(min|max|abs|der|pre|connect|sign|sqrt|Integer|String|div|rem|ceil|floor|integer|tan|atan|atan2|cos|acos|sin|asin|sinh|cosh|tanh|exp|log|log10|delay|cardinality|homotopy|semiLinear|inStream|actualStream|spatialDistribution|getInstanceName)\b</string>
 			<key>name</key>
 			<string>string.quoted</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(for|if|when|then|loop|end if|end when|end for|else|elsewhen|and|break|each|elseif)\b</string>
+			<string>\b(for|if|when|while|then|loop|end if|end when|end for|end while|else|elsewhen|and|break|each|elseif)\b</string>
 			<key>name</key>
 			<string>variable.parameter</string>
 		</dict>
