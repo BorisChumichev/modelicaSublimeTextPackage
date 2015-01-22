@@ -11,8 +11,11 @@ patterns:
 - name: constant.numeric
   match: \b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b
 
-- name: keyword
-  match: \b(Real|Integer|Boolean)\b
+- name: storage.type
+  match: \b(Real|Integer|Boolean|String)\b
+
+- name: storage.modifier
+  match: \b(constant|final|parameter|expandable|replaceable|redeclare|constrainedby|import|flow|stream|input|output|discrete|connector)\b
 
 - name: keyword
   match: \b\s*([A-Z])(?:([^ ;$]+)(;)?)([.]([A-Z])(?:([^ ;$]+)(;)?)?)++\b
