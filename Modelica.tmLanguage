@@ -1,7 +1,5 @@
-<!-- Created with backwards engineering // Stefan Bröyn -->
-
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>fileTypes</key>
@@ -16,7 +14,7 @@
 			<key>match</key>
 			<string>\b(parameter|constant|import|inner|outer|final|input|output)\b</string>
 			<key>name</key>
-	   		<string>constant.language</string>
+			<string>constant.language</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -24,7 +22,7 @@
 			<key>name</key>
 			<string>keyword</string>
 		</dict>
-		<dict> 
+		<dict>
 			<key>match</key>
 			<string>\b\s*([A-Z])(?:([^ ;$]+)(;)?)([.]([A-Z])(?:([^ ;$]+)(;)?)?)++\b</string>
 			<key>name</key>
@@ -42,35 +40,53 @@
 			<key>name</key>
 			<string>variable.parameter</string>
 		</dict>
-	    <dict>
+		<dict>
 			<key>match</key>
 			<string>\b(extends|partial|within)\b</string>
 			<key>name</key>
 			<string>support.type</string>
 		</dict>
-	    <dict>
+		<dict>
 			<key>match</key>
 			<string>\b(algorithm|equation|protected|public|register|end|initial)\b</string>
 			<key>name</key>
 			<string>keyword</string>
 		</dict>
 		<dict>
-			<key>match</key> <string>\b((model|class|record|block|package)\s+\w+)\b</string>
 			<key>captures</key>
 			<dict>
-				<key>1</key> <dict> <key>name</key> <string>entity.name.type.modelica</string> </dict>
-				<key>2</key> <dict> <key>name</key> <string>keyword</string> </dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.type.modelica</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword</string>
+				</dict>
 			</dict>
+			<key>match</key>
+			<string>\b((model|class|record|block|package)\s+\w+)\b</string>
 		</dict>
 		<dict>
-			<key>match</key> <string>((function)\s+\w+)</string>
 			<key>captures</key>
 			<dict>
-				<key>1</key> <dict> <key>name</key> <string>entity.name.function</string> </dict>
-				<key>2</key> <dict> <key>name</key> <string>keyword</string> </dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword</string>
+				</dict>
 			</dict>
+			<key>match</key>
+			<string>((function)\s+\w+)</string>
 		</dict>
-    <dict>
+		<dict>
 			<key>match</key>
 			<string>(//).*$\n?</string>
 			<key>name</key>

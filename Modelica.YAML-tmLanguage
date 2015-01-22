@@ -1,0 +1,52 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+name: Modelica
+scopeName: source.modelica
+fileTypes: [mo]
+uuid: 43df6fac-7928-42e2-9890-f5073aaddb14
+
+patterns:
+- name: constant.language
+  match: \b(parameter|constant|import|inner|outer|final|input|output)\b
+
+- name: keyword
+  match: \b(Real|Integer|Boolean)\b
+
+- name: keyword
+  match: \b\s*([A-Z])(?:([^ ;$]+)(;)?)([.]([A-Z])(?:([^ ;$]+)(;)?)?)++\b
+
+- name: string.quoted
+  match: \b(min|max|abs|der|pre|connect|sign|sqrt|Integer|String|div|rem|ceil|floor|integer|tan|atan|atan2|cos|acos|sin|asin|sinh|cosh|tanh|exp|log|log10|delay|cardinality|homotopy|semiLinear|inStream|actualStream|spatialDistribution|getInstanceName)\b
+
+- name: variable.parameter
+  match: \b(for|if|when|while|then|loop|end if|end when|end for|end while|else|elsewhen|and|break|each|elseif)\b
+
+- name: support.type
+  match: \b(extends|partial|within)\b
+
+- name: keyword
+  match: \b(algorithm|equation|protected|public|register|end|initial)\b
+
+- match: \b((model|class|record|block|package)\s+\w+)\b
+  captures:
+    '1': {name: entity.name.type.modelica}
+    '2': {name: keyword}
+
+- match: ((function)\s+\w+)
+  captures:
+    '1': {name: entity.name.function}
+    '2': {name: keyword}
+
+- name: comment.block
+  match: (//).*$\n?
+
+- name: comment.block
+  begin: /\*
+  end: \*/
+
+- name: comment.block
+  begin: annotation
+  end: ;\s*\n
+
+- name: entity.other.inherited-class
+  begin: '"'
+  end: '"'
