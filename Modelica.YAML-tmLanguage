@@ -5,6 +5,18 @@ fileTypes: [mo]
 uuid: 43df6fac-7928-42e2-9890-f5073aaddb14
 
 patterns:
+
+- name: comment.block
+  begin: /\*
+  end: \*/
+
+- name: comment.block
+  begin: annotation
+  end: ;\s*\n
+
+- name: comment.line
+  match: (//).*$\n?
+
 - name: constant.language
   match: \b(true|false)\b
 
@@ -20,6 +32,21 @@ patterns:
 - name: keyword
   match: \b\s*([A-Z])(?:([^ ;$]+)(;)?)([.]([A-Z])(?:([^ ;$]+)(;)?)?)++\b
 
+- name: keyword.control
+  match: \b(for|if|when|while|then|loop|end if|end when|end for|end while|else|elsewhen|and|break|each|elseif)\b
+
+- name: keyword.operator.logical
+  match: \b(and|or|not)\b
+
+- name: keyword.operator.comparison
+  match: <|<\=|>|>\=|\=\=|<>
+
+- name: keyword.operator.arithmetic
+  match: \+|\-|\.\+|\.\-|\*|\.\*|/|\./|\^
+
+- name: keyword.operator.assignment
+  match: \=
+
 - name: support.function.mathematical
   match: \b(acos|asin|atan|atan2|cos|cosh|exp|log|log10|sin|sinh|tan|tanh|abs|sign|sqrt|max|min|product|sum)\b
 
@@ -31,9 +58,6 @@ patterns:
 
 - name: support.function.special
   match: \b(connect|der|inStream|actualStream|semiLinear|spatialDistribution|getInstanceName|homotopy|delay|assert|ndims|size|cardinality|isPresent)\b
-
-- name: variable.parameter
-  match: \b(for|if|when|while|then|loop|end if|end when|end for|end while|else|elsewhen|and|break|each|elseif)\b
 
 - name: support.type
   match: \b(extends|partial|within)\b
@@ -50,17 +74,6 @@ patterns:
   captures:
     '1': {name: entity.name.function}
     '2': {name: keyword}
-
-- name: comment.line
-  match: (//).*$\n?
-
-- name: comment.block
-  begin: /\*
-  end: \*/
-
-- name: comment.block
-  begin: annotation
-  end: ;\s*\n
 
 - name: entity.other.inherited-class
   begin: '"'

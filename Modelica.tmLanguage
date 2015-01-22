@@ -11,6 +11,28 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>annotation</string>
+			<key>end</key>
+			<string>;\s*\n</string>
+			<key>name</key>
+			<string>comment.block</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(//).*$\n?</string>
+			<key>name</key>
+			<string>comment.line</string>
+		</dict>
+		<dict>
 			<key>match</key>
 			<string>\b(true|false)\b</string>
 			<key>name</key>
@@ -42,21 +64,57 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(acos|asin|atan|atan2|cos|cosh|exp|log|log10|sin|sinh|tan|tanh)\b</string>
+			<string>\b(for|if|when|while|then|loop|end if|end when|end for|end while|else|elsewhen|and|break|each|elseif)\b</string>
+			<key>name</key>
+			<string>keyword.control</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(and|or|not)\b</string>
+			<key>name</key>
+			<string>keyword.operator.logical</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>&lt;|&lt;\=|&gt;|&gt;\=|\=\=|&lt;&gt;</string>
+			<key>name</key>
+			<string>keyword.operator.comparison</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\+|\-|\.\+|\.\-|\*|\.\*|/|\./|\^</string>
+			<key>name</key>
+			<string>keyword.operator.arithmetic</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\=</string>
+			<key>name</key>
+			<string>keyword.operator.assignment</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(acos|asin|atan|atan2|cos|cosh|exp|log|log10|sin|sinh|tan|tanh|abs|sign|sqrt|max|min|product|sum)\b</string>
 			<key>name</key>
 			<string>support.function.mathematical</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(scalar|vector|matrix|identity diagonal zeros ones fill linspace transpose outerProduct symmetric cross skew)\b</string>
+			<string>\b(scalar|vector|matrix|identity|diagonal|zeros|ones|fill|linspace|transpose|outerProduct|symmetric|cross|skew)\b</string>
 			<key>name</key>
 			<string>support.function.array</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(for|if|when|while|then|loop|end if|end when|end for|end while|else|elsewhen|and|break|each|elseif)\b</string>
+			<string>\b(ceil|div|fill|floor|integer|max|min|mod|rem|pre|noEvent|change|edge|initial|terminal|reinit|sample|smooth|terminate)\b</string>
 			<key>name</key>
-			<string>variable.parameter</string>
+			<string>support.function.event</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(connect|der|inStream|actualStream|semiLinear|spatialDistribution|getInstanceName|homotopy|delay|assert|ndims|size|cardinality|isPresent)\b</string>
+			<key>name</key>
+			<string>support.function.special</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -103,28 +161,6 @@
 			</dict>
 			<key>match</key>
 			<string>((function)\s+\w+)</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(//).*$\n?</string>
-			<key>name</key>
-			<string>comment.line</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>/\*</string>
-			<key>end</key>
-			<string>\*/</string>
-			<key>name</key>
-			<string>comment.block</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>annotation</string>
-			<key>end</key>
-			<string>;\s*\n</string>
-			<key>name</key>
-			<string>comment.block</string>
 		</dict>
 		<dict>
 			<key>begin</key>
