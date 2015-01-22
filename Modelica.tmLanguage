@@ -94,6 +94,12 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>\b(algorithm|equation|initial equation|protected|public|register|end)\b</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>\b(acos|asin|atan|atan2|cos|cosh|exp|log|log10|sin|sinh|tan|tanh|abs|sign|sqrt|max|min|product|sum)\b</string>
 			<key>name</key>
 			<string>support.function.mathematical</string>
@@ -123,18 +129,12 @@
 			<string>support.type</string>
 		</dict>
 		<dict>
-			<key>match</key>
-			<string>\b(algorithm|equation|protected|public|register|end|initial)\b</string>
-			<key>name</key>
-			<string>keyword</string>
-		</dict>
-		<dict>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.type.modelica</string>
+					<string>entity.name.type</string>
 				</dict>
 				<key>2</key>
 				<dict>

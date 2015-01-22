@@ -47,6 +47,9 @@ patterns:
 - name: keyword.operator.assignment
   match: \=
 
+- name: keyword
+  match: \b(algorithm|equation|initial equation|protected|public|register|end)\b
+
 - name: support.function.mathematical
   match: \b(acos|asin|atan|atan2|cos|cosh|exp|log|log10|sin|sinh|tan|tanh|abs|sign|sqrt|max|min|product|sum)\b
 
@@ -62,12 +65,9 @@ patterns:
 - name: support.type
   match: \b(extends|partial|within)\b
 
-- name: keyword
-  match: \b(algorithm|equation|protected|public|register|end|initial)\b
-
 - match: \b((model|class|record|block|package)\s+\w+)\b
   captures:
-    '1': {name: entity.name.type.modelica}
+    '1': {name: entity.name.type}
     '2': {name: keyword}
 
 - match: ((function)\s+\w+)

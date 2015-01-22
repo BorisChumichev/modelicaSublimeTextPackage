@@ -32,7 +32,7 @@
 		<key>increaseIndentPattern</key>
 		<string>(?x)^\s*
     \b(
-       if|for|when|else|elsewhen|model|package
+       if|for|when|else|elsewhen|model|package|equation|initial equation|record|block
 	)\b</string>
 		<key>smartTypingPairs</key>
 		<array>
