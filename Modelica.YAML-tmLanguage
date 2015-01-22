@@ -36,7 +36,7 @@ patterns:
     '1': {name: entity.name.function}
     '2': {name: keyword}
 
-- name: comment.block
+- name: comment.line
   match: (//).*$\n?
 
 - name: comment.block

@@ -90,7 +90,7 @@
 			<key>match</key>
 			<string>(//).*$\n?</string>
 			<key>name</key>
-			<string>comment.block</string>
+			<string>comment.line</string>
 		</dict>
 		<dict>
 			<key>begin</key>
