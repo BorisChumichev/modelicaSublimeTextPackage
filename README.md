@@ -1,4 +1,4 @@
-##A Sublime Text Package for the Modelica Language. 
+##A Sublime Text Package for the Modelica Language
 
 Modelica: http://www.modelica.org
 
