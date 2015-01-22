@@ -30,7 +30,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(constant|final|parameter|expandable|replaceable|redeclare|constrainedby|import|flow|stream|input|output|connector)\b</string>
+			<string>\b(constant|final|parameter|expandable|replaceable|redeclare|constrainedby|import|flow|stream|input|output|discrete|connector)\b</string>
 			<key>name</key>
 			<string>storage.modifier</string>
 		</dict>
@@ -42,9 +42,15 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(min|max|abs|der|pre|connect|sign|sqrt|Integer|String|div|rem|ceil|floor|integer|tan|atan|atan2|cos|acos|sin|asin|sinh|cosh|tanh|exp|log|log10|delay|cardinality|homotopy|semiLinear|inStream|actualStream|spatialDistribution|getInstanceName)\b</string>
+			<string>\b(acos|asin|atan|atan2|cos|cosh|exp|log|log10|sin|sinh|tan|tanh)\b</string>
 			<key>name</key>
-			<string>string.quoted</string>
+			<string>support.function.mathematical</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(scalar|vector|matrix|identity diagonal zeros ones fill linspace transpose outerProduct symmetric cross skew)\b</string>
+			<key>name</key>
+			<string>support.function.array</string>
 		</dict>
 		<dict>
 			<key>match</key>

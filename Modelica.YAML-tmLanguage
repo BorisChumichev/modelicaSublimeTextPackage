@@ -20,8 +20,17 @@ patterns:
 - name: keyword
   match: \b\s*([A-Z])(?:([^ ;$]+)(;)?)([.]([A-Z])(?:([^ ;$]+)(;)?)?)++\b
 
-- name: string.quoted
-  match: \b(min|max|abs|der|pre|connect|sign|sqrt|Integer|String|div|rem|ceil|floor|integer|tan|atan|atan2|cos|acos|sin|asin|sinh|cosh|tanh|exp|log|log10|delay|cardinality|homotopy|semiLinear|inStream|actualStream|spatialDistribution|getInstanceName)\b
+- name: support.function.mathematical
+  match: \b(acos|asin|atan|atan2|cos|cosh|exp|log|log10|sin|sinh|tan|tanh|abs|sign|sqrt|max|min|product|sum)\b
+
+- name: support.function.array
+  match: \b(scalar|vector|matrix|identity|diagonal|zeros|ones|fill|linspace|transpose|outerProduct|symmetric|cross|skew)\b
+
+- name: support.function.event
+  match: \b(ceil|div|fill|floor|integer|max|min|mod|rem|pre|noEvent|change|edge|initial|terminal|reinit|sample|smooth|terminate)\b
+
+- name: support.function.special
+  match: \b(connect|der|inStream|actualStream|semiLinear|spatialDistribution|getInstanceName|homotopy|delay|assert|ndims|size|cardinality|isPresent)\b
 
 - name: variable.parameter
   match: \b(for|if|when|while|then|loop|end if|end when|end for|end while|else|elsewhen|and|break|each|elseif)\b
