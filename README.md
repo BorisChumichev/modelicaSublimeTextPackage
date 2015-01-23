@@ -2,7 +2,7 @@
 
 Package provides syntax definition for [Modelica language](http://www.modelica.org).
 
-###Installation:
+###Installation
 
 First [Install Package Controll for Sublime Text](https://packagecontrol.io/installation) (if you still have not done so) and restart Sublime Text.
 
