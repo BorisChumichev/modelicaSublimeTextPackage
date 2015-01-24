@@ -1,0 +1,14 @@
+<!-- function -->
+<snippet>
+  <content><![CDATA[
+function ${1:FunctionName}
+  input ${2}
+  output ${3}
+algorithm 
+  ${4}
+end ${1:FunctionName};
+]]></content>
+  <tabTrigger>function</tabTrigger>
+  <scope>source.modelica</scope>
+  <description>Modelica function definition</description>
+</snippet>
