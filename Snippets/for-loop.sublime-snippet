@@ -1,0 +1,11 @@
+<!-- for loop -->
+<snippet>
+  <content><![CDATA[
+for ${1:i} in ${2:enum} loop
+  ${3}
+end for;
+]]></content>
+  <tabTrigger>for</tabTrigger>
+  <scope>source.modelica</scope>
+  <description>Modelica for loop</description>
+</snippet>
