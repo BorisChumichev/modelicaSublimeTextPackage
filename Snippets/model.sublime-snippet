@@ -1,0 +1,13 @@
+<!-- model -->
+<snippet>
+  <content><![CDATA[
+model ${1:Model} "${2:Description}"
+  ${3}
+equation
+  ${4}
+end ${1:Model};
+]]></content>
+  <tabTrigger>model</tabTrigger>
+  <scope>source.modelica</scope>
+  <description>Modelica model definition</description>
+</snippet>
