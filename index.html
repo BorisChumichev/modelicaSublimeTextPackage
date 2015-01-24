@@ -89,8 +89,8 @@ ul {
   <div class="container">
     <h1>Modelica Sublime Text Package <iframe src="https://ghbtns.com/github-btn.html?user=BorisChumichev&repo=modelicaSublimeTextPackage&type=star&count=true&size=small" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></h1>
     <p><a href="http://www.sublimetext.com/">Sublime Text</a> editor comes without syntax definitions for <a href="https://modelica.org/">Modelica language</a> by default, so the purpose of the package is to bring Modelica language support to Sublime Text and also to provide snippets for commonly used language patterns.</p>
-    <video width='500' autoplay loop>
-      <source src="snippets.mp4" type="video/mp4">
+    <video id='video' width='500' autoplay="autoplay" loop>
+      <source src="snippets.mp4" type="video/mp4" >
       <source src="snippets.ogv" type="video/ogg">
       <source src="snippets.webm" type="video/webm">
     </video>
@@ -107,5 +107,11 @@ ul {
     <h3>Contribute</h3>
     <p>Everyone can contribute to the package development. Package sources <a href="https://github.com/BorisChumichev/modelicaSublimeTextPackage">are hosted at GitHub</a>, you are welcome to submit a pull request or create an issue.</p>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() { 
+      if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g))
+        document.getElementById('video').setAttribute("controls", "true");
+    });
+  </script>
   </body>
 </html>
