@@ -1,0 +1,11 @@
+<!-- model -->
+<snippet>
+  <content><![CDATA[
+if ${1:condition} then
+  ${2}
+end if;
+]]></content>
+  <tabTrigger>if</tabTrigger>
+  <scope>source.modelica</scope>
+  <description>Modelica: if statement</description>
+</snippet>
