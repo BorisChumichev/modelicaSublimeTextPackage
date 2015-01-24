@@ -1,0 +1,9 @@
+<!-- connect-equation -->
+<snippet>
+  <content><![CDATA[
+connect(${1:connector1}, ${2:connector2});
+]]></content>
+  <tabTrigger>connect</tabTrigger>
+  <scope>source.modelica</scope>
+  <description>Modelica connect-equation</description>
+</snippet>
