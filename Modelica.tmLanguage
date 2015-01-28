@@ -19,14 +19,6 @@
 			<string>comment.block</string>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>annotation</string>
-			<key>end</key>
-			<string>;\s*\n</string>
-			<key>name</key>
-			<string>comment.block</string>
-		</dict>
-		<dict>
 			<key>match</key>
 			<string>(//).*$\n?</string>
 			<key>name</key>
@@ -161,6 +153,25 @@
 			</dict>
 			<key>match</key>
 			<string>((function)\s+\w+)</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>annotation</string>
+			<key>end</key>
+			<string>;\s*\n</string>
+			<key>name</key>
+			<string>comment.block</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>"</string>
+					<key>end</key>
+					<string>"</string>
+					<key>name</key>
+					<string>comment.block</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>begin</key>

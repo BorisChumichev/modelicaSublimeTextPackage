@@ -10,10 +10,6 @@ patterns:
   begin: /\*
   end: \*/
 
-- name: comment.block
-  begin: annotation
-  end: ;\s*\n
-
 - name: comment.line
   match: (//).*$\n?
 
@@ -74,6 +70,14 @@ patterns:
   captures:
     '1': {name: entity.name.function}
     '2': {name: keyword}
+
+- name: comment.block
+  begin: annotation
+  end: ;\s*\n
+  patterns:
+  - name: comment.block
+    begin: '"'
+    end: '"'
 
 - name: entity.other.inherited-class
   begin: '"'
