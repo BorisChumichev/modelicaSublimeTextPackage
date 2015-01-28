@@ -13,3 +13,7 @@ Then follow these steps:
 1. Enter: Modelica
 
 Syntax definitions will be applyed for all sources with 'mo' extention. Or you could manually enable syntax through command palette: 'Set Syntax: Modelica'.
+
+### Contributing
+
+Everyone can contribute to the package development. You are welcome to submit a pull request or create an issue. Package is not well tested yet so feedback from first users is really appreciated. Please create an issue if you find any bugs.
