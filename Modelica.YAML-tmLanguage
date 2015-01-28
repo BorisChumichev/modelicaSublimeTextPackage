@@ -41,7 +41,7 @@ patterns:
   match: \+|\-|\.\+|\.\-|\*|\.\*|/|\./|\^
 
 - name: keyword.operator.assignment
-  match: \=
+  match: \=|\:\=
 
 - name: keyword
   match: \b(algorithm|equation|initial equation|protected|public|register|end)\b
