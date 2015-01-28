@@ -1,1 +1,1 @@
-That repository was transfered to https://github.com/BorisChumicev/modelicaSublimeTextPackage
+That repository was transfered to https://github.com/BorisChumichev/modelicaSublimeTextPackage
