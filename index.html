@@ -6,8 +6,8 @@
 html {
   font-family: 'Playfair Display' serif;
   font-weight: 200;
-  color: #4A4A4A;
-  font-size: 18px;
+  color: #1F1F1F;
+  font-size: 20px;
   background: #fffdff;
   font-variant-ligatures: common-ligatures
     -moz-font-feature-settings: "liga=1, dlig=1";
@@ -20,18 +20,32 @@ body {
   margin: 0;
 }
 .container {
-  width: 700px;
+  width: 800px;
   margin: 0 auto;
   padding-bottom: 200px;
-  -webkit-transition: all .7s ease-in-out;
-  -o-transition: all .7s ease-in-out;
-  transition: all .7s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .container.fade {
-  -webkit-transform: scale(0.92); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-  -ms-transform: scale(0.92); /* IE 9 */
-      transform: scale(0.92); /* IE 10, Fx 16+, Op 12.1+ */
+  -webkit-transform: scale(0.9); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+  -ms-transform: scale(0.9); /* IE 9 */
+      transform: scale(0.9); /* IE 10, Fx 16+, Op 12.1+ */
+}
+
+
+.container span,
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container li,
+.container video,
+.container a { 
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .container.fade span,
@@ -42,7 +56,7 @@ body {
 .container.fade li,
 .container.fade video,
 .container.fade a {
-  opacity: 0.4;
+  opacity: 0.3;
   -webkit-filter: blur(2px);
   -o-filter: blur(2px);
   filter: blur(2px);
@@ -64,17 +78,17 @@ a {
   font-weight: 700;
   position: relative;
   display: inline-block;
-  -webkit-transition: all .5s cubic-bezier(.34,1.61,.42,.96);
-  -o-transition: all .5s cubic-bezier(.34,1.61,.42,.96);
-  transition: all .5s cubic-bezier(.34,1.61,.42,.96);
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   -webkit-transform: scale(1); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
   -ms-transform: scale(1); /* IE 9 */
       transform: scale(1); /* IE 10, Fx 16+, Op 12.1+ */
 }
 a:hover {
-  -webkit-transform: scale(1.3); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-    -ms-transform: scale(1.3); /* IE 9 */
-        transform: scale(1.3); /* IE 10, Fx 16+, Op 12.1+ */
+  -webkit-transform: scale(1.6); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+    -ms-transform: scale(1.6); /* IE 9 */
+        transform: scale(1.6); /* IE 10, Fx 16+, Op 12.1+ */
   -webkit-filter: blur(0);
   -o-filter: blur(0);
   filter: blur(0);
@@ -95,7 +109,7 @@ h6 {
 h1 {
   font-weight: 400;
   border-top: 70px solid black;
-  font-size: 38px;
+  font-size: 50px;
   text-align: left;
   position: relative;
   padding-top: 50px;
@@ -120,7 +134,7 @@ h2 {
   margin-top: 1em;
 }
 h3 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: 400;
   margin-top: 30px;
   margin-bottom: 15px;
@@ -161,9 +175,12 @@ a > i {
 a:hover > i {
   opacity: 1;
   left: 0px;
-  -webkit-transition: all 2s ease-in-out;
-  -o-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+nav {
+  display: none; 
 }
 
 
@@ -181,13 +198,13 @@ a:hover > i {
       <a  href="https://github.com/BorisChumichev/modelicaSublimeTextPackage">GitHub repository</a>
     </nav>
     <p><a target="_blank" href="http://www.sublimetext.com/">Sublime Text<i>http://www.sublimetext.com/</i></a> <span>editor comes without syntax definitions for</span> <a target="_blank" href="https://modelica.org/">Modelica<i>https://modelica.org/</i></a> <span> language by default, so the purpose of the package is to bring Modelica language support to Sublime Text and also to provide snippets for commonly used language patterns.</span></p>
-    <video id='video' width="520" autoplay="autoplay" loop>
+    <video id='video' autoplay="autoplay" loop>
       <source src="snippets.mp4" type="video/mp4" >
       <source src="snippets.ogv" type="video/ogg">
       <source src="snippets.webm" type="video/webm">
     </video>
     <h3>Install</h3>
-    <p><span>First</span> <a target="_blank" href="https://packagecontrol.io/installation">Install Package Controll for Sublime Text<i>https://packagecontrol.io/installation/</i></a><span> (if you still have not done so) and restart Sublime. Then follow these steps:</span></p>
+    <p><span>First</span> <a target="_blank" href="https://packagecontrol.io/installation">install Package Controll for Sublime Text<i>https://packagecontrol.io/installation/</i></a><span> (if you still have not done so) and restart Sublime. Then follow these steps:</span></p>
 
     <ol>
     <li>Open Sublime's command palette (Cmd+Shift+P)</li>
@@ -197,7 +214,7 @@ a:hover > i {
 
     <p><span>Syntax definitions will be applyed for all sources with 'mo' extention. Or you could manually enable syntax through command palette: 'Set Syntax: Modelica'.</span></p>
     <h3>Contribute</h3>
-    <p><span>Everyone can contribute to the package development. Package sources</span> <a target="_blank" href="https://github.com/BorisChumichev/modelicaSublimeTextPackage">are hosted at GitHub<i>https://github.com/BorisChumichev/modelicaSublimeTextPackage</i></a><span>, you are welcome to submit a pull request or create an issue.</span></p>
+    <p><span>Everyone can contribute to the package development. Package sources are hosted </span> <a target="_blank" href="https://github.com/BorisChumichev/modelicaSublimeTextPackage">at GitHub<i>https://github.com/BorisChumichev/modelicaSublimeTextPackage</i></a><span>, you are welcome to submit a pull request or create an issue.</span></p>
   </div>
   <script>
     document.addEventListener("DOMContentLoaded", function() { 
