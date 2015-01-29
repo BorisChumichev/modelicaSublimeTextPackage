@@ -1,28 +1,83 @@
 <html>
   <head>
     <style>
-    @import url(http://fonts.googleapis.com/css?family=Slabo+27px);
+    @import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700italic,400italic);
+    @import url(http://fonts.googleapis.com/css?family=Playfair+Display+SC:700);
 html {
-  font-family: 'Slabo 27px' serif;
+  font-family: 'Playfair Display' serif;
   font-weight: 200;
-  color: #5d5d5d;
+  color: #4A4A4A;
   font-size: 18px;
   background: #fffdff;
+  font-variant-ligatures: common-ligatures
+    -moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga", "dlig";
+    -webkit-font-feature-settings: "liga", "dlig";
+    -o-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig";
+}
+body {
+  margin: 0;
 }
 .container {
-  font-family: 'Slabo 27px' serif;
   width: 700px;
   margin: 0 auto;
   padding-bottom: 200px;
+  -webkit-transition: all .7s ease-in-out;
+  -o-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;
 }
+
+.container.fade {
+  -webkit-transform: scale(0.92); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+  -ms-transform: scale(0.92); /* IE 9 */
+      transform: scale(0.92); /* IE 10, Fx 16+, Op 12.1+ */
+}
+
+.container.fade span,
+.container.fade h1,
+.container.fade h2,
+.container.fade h3,
+.container.fade h4,
+.container.fade li,
+.container.fade video,
+.container.fade a {
+  opacity: 0.4;
+  -webkit-filter: blur(2px);
+  -o-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.container.fade a:hover {
+  opacity: 1;
+  -webkit-filter: blur(0px);
+  -o-filter: blur(0px);
+  filter: blur(0px);
+}
+
+
 a {
-  color: #00acbe;
+  color: #000;
+  font-family: 'Playfair Display SC' serif;
   cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: all .5s cubic-bezier(.34,1.61,.42,.96);
+  -o-transition: all .5s cubic-bezier(.34,1.61,.42,.96);
+  transition: all .5s cubic-bezier(.34,1.61,.42,.96);
+  -webkit-transform: scale(1); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+  -ms-transform: scale(1); /* IE 9 */
+      transform: scale(1); /* IE 10, Fx 16+, Op 12.1+ */
 }
 a:hover {
-  color: #bbd7da;
-  text-decoration: none;
-  cursor: pointer;
+  -webkit-transform: scale(1.3); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+    -ms-transform: scale(1.3); /* IE 9 */
+        transform: scale(1.3); /* IE 10, Fx 16+, Op 12.1+ */
+  -webkit-filter: blur(0);
+  -o-filter: blur(0);
+  filter: blur(0);
 }
 h1,
 h2,
@@ -30,16 +85,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Slabo 27px' serif;
-  color: #6e6e6e;
-  font-weight: 300;
+  color: #000;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+  text-transform: lowercase;
+  font-style: italic;
+  margin-left: -1em;
 }
 h1 {
   font-weight: 400;
+  border-top: 70px solid black;
   font-size: 38px;
   text-align: left;
-  margin: 1.7em 0 1.2em -5px;
   position: relative;
+  padding-top: 50px;
+  margin-left: -1em;
+  margin-top: 0;
 }
 h1 iframe {
   float: right;
@@ -48,7 +109,6 @@ h1 iframe {
 h1 span {
   position: absolute;
   font-size: 0.23em;
-  font-family: 'Slabo 27px' serif;
   letter-spacing: 0.1em;
   font-weight: 200;
   top: 130px;
@@ -78,24 +138,56 @@ ul {
 .emphasis {
   font-weight: 400;
 }
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul > li{
+  display: inline-block;
+  margin-right: 40px;
+}
+
+a > i {
+  position: absolute;
+  opacity: 0;
+  top:34px;
+  left: -60px;
+  font-style: italic;
+  font-weight: 400;
+  font-family: 'Playfair Display' serif;
+  font-size: 16px;
+  pointer-events: none;
+}
+a:hover > i {
+  opacity: 1;
+  left: 0px;
+  -webkit-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
 
 
 
     </style>
   </head>
   <title>Modelica Sublime Text Package</title>
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <meta name="description" content="Modelica language Sublime Text editor syntax and snippets">
   <body>
   <div class="container">
     <h1>Modelica Sublime Text Package <iframe src="https://ghbtns.com/github-btn.html?user=BorisChumichev&repo=modelicaSublimeTextPackage&type=star&count=true&size=small" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></h1>
-    <p><a href="http://www.sublimetext.com/">Sublime Text</a> editor comes without syntax definitions for <a href="https://modelica.org/">Modelica language</a> by default, so the purpose of the package is to bring Modelica language support to Sublime Text and also to provide snippets for commonly used language patterns.</p>
-    <video id='video' width='500' autoplay="autoplay" loop>
+    <nav>
+      <a href="https://github.com/BorisChumichev/modelicaSublimeTextPackage">Install</a>
+      <a  href="https://github.com/BorisChumichev/modelicaSublimeTextPackage">GitHub repository</a>
+    </nav>
+    <p><a target="_blank" href="http://www.sublimetext.com/">Sublime Text<i>http://www.sublimetext.com/</i></a> <span>editor comes without syntax definitions for</span> <a target="_blank" href="https://modelica.org/">Modelica<i>https://modelica.org/</i></a> <span> language by default, so the purpose of the package is to bring Modelica language support to Sublime Text and also to provide snippets for commonly used language patterns.</span></p>
+    <video id='video' width="520" autoplay="autoplay" loop>
       <source src="snippets.mp4" type="video/mp4" >
       <source src="snippets.ogv" type="video/ogg">
       <source src="snippets.webm" type="video/webm">
     </video>
     <h3>Install</h3>
-    <p>First <a href="https://packagecontrol.io/installation">Install Package Controll for Sublime Text</a> (if you still have not done so) and restart Sublime. Then follow these steps:</p>
+    <p><span>First</span> <a target="_blank" href="https://packagecontrol.io/installation">Install Package Controll for Sublime Text<i>https://packagecontrol.io/installation/</i></a><span> (if you still have not done so) and restart Sublime. Then follow these steps:</span></p>
 
     <ol>
     <li>Open Sublime's command palette (Cmd+Shift+P)</li>
@@ -103,9 +195,9 @@ ul {
     <li>Enter: Modelica</li>
     </ol>
 
-    <p>Syntax definitions will be applyed for all sources with 'mo' extention. Or you could manually enable syntax through command palette: 'Set Syntax: Modelica'.</p>
+    <p><span>Syntax definitions will be applyed for all sources with 'mo' extention. Or you could manually enable syntax through command palette: 'Set Syntax: Modelica'.</span></p>
     <h3>Contribute</h3>
-    <p>Everyone can contribute to the package development. Package sources <a href="https://github.com/BorisChumichev/modelicaSublimeTextPackage">are hosted at GitHub</a>, you are welcome to submit a pull request or create an issue.</p>
+    <p><span>Everyone can contribute to the package development. Package sources</span> <a target="_blank" href="https://github.com/BorisChumichev/modelicaSublimeTextPackage">are hosted at GitHub<i>https://github.com/BorisChumichev/modelicaSublimeTextPackage</i></a><span>, you are welcome to submit a pull request or create an issue.</span></p>
   </div>
   <script>
     document.addEventListener("DOMContentLoaded", function() { 
@@ -113,7 +205,33 @@ ul {
         document.getElementById('video').setAttribute("controls", "true");
     });
   </script>
-
+<script>
+  $(function () {
+    var hovered = false;
+    var $container = $('.container')
+    $container.mousemove(function (e) {
+      if (!hovered) {
+        var xPos = e.pageX.toString();
+        var yPos = e.pageY.toString();
+        console.log(yPos)
+        $container.css('-webkit-transform-origin', '350px ' + yPos + 'px')
+        $container.css('-moz-transform-origin', '350px ' + yPos + 'px')
+        $container.css('-o-transform-origin', '350px ' + yPos + 'px')
+        $container.css('-ms-transform-origin', '350px ' + yPos + 'px')
+        $container.css('transform-origin', '350px ' + yPos + 'px')
+      }
+    })
+    $('a').mouseenter(function () {
+      hovered = true
+      $container.addClass('fade')
+      var parentOffset = $(this).parent().offset(); 
+    })
+    $('a').mouseleave(function () {
+      hovered = false
+      $('.container').removeClass('fade')
+    })
+  })
+</script>
 <script type="text/javascript">
 (function (d, w, c) {
     (w[c] = w[c] || []).push(function() {
@@ -121,7 +239,6 @@ ul {
             w.yaCounter28075827 = new Ya.Metrika({id:28075827});
         } catch(e) { }
     });
-
     var n = d.getElementsByTagName("script")[0],
         s = d.createElement("script"),
         f = function () { n.parentNode.insertBefore(s, n); };
@@ -135,6 +252,5 @@ ul {
 })(document, window, "yandex_metrika_callbacks");
 </script>
 <noscript><div><img src="//mc.yandex.ru/watch/28075827" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
   </body>
 </html>
