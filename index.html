@@ -1,20 +1,19 @@
 <html>
   <head>
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/EB+Garamond:400,400i">
     <style>
-    @import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700italic,400italic);
-    @import url(http://fonts.googleapis.com/css?family=Playfair+Display+SC:700);
 html {
-  font-family: 'Playfair Display' serif;
+  font-family: 'EB Garamond' serif;
   font-weight: 200;
   color: #1F1F1F;
-  font-size: 20px;
+  font-size: 24px;
   background: #fffdff;
-  font-variant-ligatures: common-ligatures
-    -moz-font-feature-settings: "liga=1, dlig=1";
-    -ms-font-feature-settings: "liga", "dlig";
-    -webkit-font-feature-settings: "liga", "dlig";
-    -o-font-feature-settings: "liga", "dlig";
-    font-feature-settings: "liga", "dlig";
+  font-variant-ligatures: common-ligatures;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "kern","liga","dlig","hlig";
+  -webkit-font-feature-settings: "kern","liga","dlig","hlig";
+  -o-font-feature-settings: "kern","liga","dlig","hlig";
+  font-feature-settings: "kern","liga","dlig","hlig";
 }
 body {
   margin: 0;
@@ -23,9 +22,9 @@ body {
   width: 800px;
   margin: 0 auto;
   padding-bottom: 200px;
-  -webkit-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 .container.fade {
@@ -43,9 +42,9 @@ body {
 .container li,
 .container video,
 .container a { 
-  -webkit-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 .container.fade span,
@@ -72,26 +71,31 @@ body {
 
 a {
   color: #000;
-  font-family: 'Playfair Display SC' serif;
   cursor: pointer;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   position: relative;
   display: inline-block;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  text-decoration: underline;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   -webkit-transform: scale(1); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
   -ms-transform: scale(1); /* IE 9 */
       transform: scale(1); /* IE 10, Fx 16+, Op 12.1+ */
+      -webkit-font-smoothing: antialiased;
+  translate3d( 0, 0, 0)
 }
 a:hover {
+    text-decoration: none;
   -webkit-transform: scale(1.6); /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     -ms-transform: scale(1.6); /* IE 9 */
         transform: scale(1.6); /* IE 10, Fx 16+, Op 12.1+ */
   -webkit-filter: blur(0);
   -o-filter: blur(0);
   filter: blur(0);
+  -webkit-font-smoothing: antialiased;
+  translate3d( 0, 0, 0)
 }
 h1,
 h2,
@@ -100,25 +104,25 @@ h4,
 h5,
 h6 {
   color: #000;
-  letter-spacing: 0.01em;
-  font-weight: 700;
-  text-transform: lowercase;
-  font-style: italic;
   margin-left: -1em;
 }
 h1 {
-  font-weight: 400;
   border-top: 70px solid black;
-  font-size: 50px;
+  font-size: 60px;
   text-align: left;
   position: relative;
   padding-top: 50px;
   margin-left: -1em;
   margin-top: 0;
+  font-weight: 400;
+  margin-bottom:60px;
+  position: relative;
 }
 h1 iframe {
-  float: right;
   margin-top: 7px;
+  position: absolute;
+  top: 50px;
+  right: 0;
 }
 h1 span {
   position: absolute;
@@ -156,9 +160,9 @@ ul {
   list-style: none;
   padding: 0;
 }
-ul > li{
-  display: inline-block;
-  margin-right: 40px;
+
+li {
+  line-height: 38px;
 }
 
 a > i {
@@ -168,9 +172,9 @@ a > i {
   left: -60px;
   font-style: italic;
   font-weight: 400;
-  font-family: 'Playfair Display' serif;
   font-size: 16px;
   pointer-events: none;
+  translate3d( 0, 0, 0)
 }
 a:hover > i {
   opacity: 1;
@@ -178,6 +182,7 @@ a:hover > i {
   -webkit-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  translate3d( 0, 0, 0)
 }
 nav {
   display: none; 
@@ -192,7 +197,7 @@ nav {
   <meta name="description" content="Modelica language Sublime Text editor syntax and snippets">
   <body>
   <div class="container">
-    <h1>Modelica Sublime Text Package <iframe src="https://ghbtns.com/github-btn.html?user=BorisChumichev&repo=modelicaSublimeTextPackage&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></h1>
+    <h1>Modelica<br>Sublime Text<br>Package <iframe src="https://ghbtns.com/github-btn.html?user=BorisChumichev&repo=modelicaSublimeTextPackage&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></h1>
     <nav>
       <a href="https://github.com/BorisChumichev/modelicaSublimeTextPackage">Install</a>
       <a  href="https://github.com/BorisChumichev/modelicaSublimeTextPackage">GitHub repository</a>
@@ -204,15 +209,13 @@ nav {
       <source src="snippets.webm" type="video/webm">
     </video>
     <h3>Install</h3>
-    <p><span>First</span> <a target="_blank" href="https://packagecontrol.io/installation">install Package Controll for Sublime Text<i>https://packagecontrol.io/installation/</i></a><span> (if you still have not done so) and restart Sublime. Then follow these steps:</span></p>
-
+    <p><span>First</span> <a target="_blank" href="https://packagecontrol.io/installation">install Package Control for Sublime Text<i>https://packagecontrol.io/installation/</i></a><span> (if you still have not done so) and restart Sublime Text. Then follow these steps:</span></p>
     <ol>
-    <li>Open Sublime's command palette (Cmd+Shift+P)</li>
-    <li>Enter: Package Control: Install Package</li>
-    <li>Enter: Modelica</li>
+    <li>Open Sublime's command palette <i>(Cmd+Shift+P)</i></li>
+    <li>Enter: <i>“Package Control: Install Package”</i></li>
+    <li>Enter: <i>“Modelica”</i></li>
     </ol>
-
-    <p><span>Syntax definitions will be applyed for all sources with 'mo' extention. Or you could manually enable syntax through command palette: 'Set Syntax: Modelica'.</span></p>
+    <p><span>Syntax definitions will be applyed for all sources with <i>“mo”</i> extention. Or you could manually enable syntax through command palette: <i>“Set Syntax: Modelica”</i>.</span></p>
     <h3>Contribute</h3>
     <p><span>Everyone can contribute to the package development. Package sources are hosted </span> <a target="_blank" href="https://github.com/BorisChumichev/modelicaSublimeTextPackage">at GitHub<i>https://github.com/BorisChumichev/modelicaSublimeTextPackage</i></a><span>, you are welcome to submit a pull request or create an issue.</span></p>
   </div>
