@@ -1,0 +1,10 @@
+# Explicitly declare all file extensions to be text or binary
+*.m text
+*.md text
+*.mo text
+*.mos text
+
+# Explicitly declare languages, see https://github.com/github/linguist#overrides
+*.mo linguist-language=Modelica
+*.mos linguist-language=Modelica
+*.order linguist-language=Modelica
