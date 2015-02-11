@@ -2,7 +2,7 @@
 
 Sublime Text editor comes without syntax definitions for [Modelica language](http://www.modelica.org) by default, so the purpose of this package is to bring Modelica language support to Sublime Text. In addition, it provides some handy snippets for commonly used language patterns.
 
-Also, this package is used by [github/linguist](https://github.com/github/linguist) library in order to perform syntax highlighting of Moldelica sources at github.
+Also, this package is used by [github/linguist](https://github.com/github/linguist) library in order to perform syntax highlighting of Moldelica sources at github. You can [play with it using Lightshow](https://github-lightshow.herokuapp.com/?utf8=%E2%9C%93&scope=source.modelica&grammar_url=https%3A%2F%2Fgithub.com%2FBorisChumichev%2FmodelicaSublimeTextPackage%2Fblob%2Fmaster%2FModelica.tmLanguage&grammar_text=&code_source=from-url&code_url=https%3A%2F%2Fgithub.com%2Fmodelica%2FModelica%2Fblob%2Frelease%2FModelica%25203.2.1%2FElectrical%2FAnalog%2FLines.mo&code=).
 
 ###Installation
 
