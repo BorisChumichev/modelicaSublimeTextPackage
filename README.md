@@ -12,7 +12,7 @@ First [Install Package Controll for Sublime Text](https://packagecontrol.io/inst
 
 Then follow these steps:
 
-1. Open Sublime's command palette (Cmd+Shift+P)
+1. Open Sublime's command palette (`Ctrl(Cmd)+Shift+P`)
 1. Enter: Package Control: Install Package
 1. Enter: Modelica
 
