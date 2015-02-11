@@ -1,6 +1,6 @@
 ##Sublime Text Package for the Modelica Language
 
-[view in “GitHub pages”](http://borischumichev.github.io/modelicaSublimeTextPackage/)
+[view on “GitHub pages”](http://borischumichev.github.io/modelicaSublimeTextPackage/)
 
 Sublime Text editor comes without syntax definitions for [Modelica language](http://www.modelica.org) by default, so the purpose of this package is to bring Modelica language support to Sublime Text. In addition, it provides some handy snippets for commonly used language patterns.
 
