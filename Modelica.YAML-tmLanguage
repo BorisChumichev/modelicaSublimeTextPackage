@@ -13,6 +13,7 @@ patterns:
 - name: comment.line
   match: (//).*$\n?
 
+
 - name: constant.language
   match: \b(true|false)\b
 
@@ -61,15 +62,17 @@ patterns:
 - name: support.type
   match: \b(extends|partial|within)\b
 
-- match: \b((model|class|record|block|package)\s+\w+)\b
+- match: \b((model|class|record|block|package)\s+\w+\s*(".*")*)
   captures:
     '1': {name: entity.name.type}
     '2': {name: keyword}
+    '3': {name: comment.line}
 
-- match: ((function)\s+\w+)
+- match: ((function)\s+\w+\s*(".*")*)
   captures:
     '1': {name: entity.name.function}
     '2': {name: keyword}
+    '3': {name: comment.line}
 
 - name: comment.block
   begin: annotation
@@ -79,6 +82,19 @@ patterns:
     begin: '"'
     end: '"'
 
-- name: entity.other.inherited-class
+- match: '["\w\)](\s+".*"\s*);'
+  captures:
+    '1': {name: constant.string}
+
+- name: constant.string
   begin: '"'
   end: '"'
+  patterns:
+  - name: constant.character.escaped
+    match: '\\.'
+
+
+
+  
+
+
