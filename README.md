@@ -18,6 +18,10 @@ Then follow these steps:
 
 Syntax definitions will be applyed for all sources with 'mo' extention. Or you could manually enable syntax through command palette: 'Set Syntax: Modelica'.
 
+### Atom.io editor support
+
+Thanks to [Matthis Thorade](https://github.com/thorade) there is an Atom.io editor conversion of this package. For more details on how to use it check [it's repository](https://github.com/thorade/atom-language-modelica3).
+
 ### Contributing
 
 Everyone can contribute to the package development. You are welcome to submit a pull request or create an issue. Package is not well tested yet so feedback from first users is really appreciated. Please create an issue if you find any bugs.
