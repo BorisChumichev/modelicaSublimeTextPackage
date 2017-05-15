@@ -92,6 +92,12 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>\b(inner|outer)\b</string>
+			<key>name</key>
+			<string>keyword.other</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>\b(acos|asin|atan|atan2|cos|cosh|exp|log|log10|sin|sinh|tan|tanh|abs|sign|sqrt|max|min|product|sum)\b</string>
 			<key>name</key>
 			<string>support.function.mathematical</string>
